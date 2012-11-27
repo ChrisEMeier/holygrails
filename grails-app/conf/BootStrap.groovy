@@ -18,6 +18,15 @@ class BootStrap {
                 .addToTasks(name:'Oppress peasant')
                 .addToTasks(name:'Lobbeth thou thy Holy Hand Grenade of Antioch')
                 .save(failOnError:true)
+        
+        Castle camelot = new Castle(name:'Camelot', city:'Ft. Lauderdale', state:'FL')
+                .addToKnights(title:'King', name:'Arthur', quest:q)
+                .addToKnights(title:'Sir', name:'Lancelot', quest:q)
+                .addToKnights(title:'Sir', name:'Robin', quest:q)
+                .save(failOnError:true)
+                
+        Castle swamp = new Castle(name:'Swamp', city:'Hollywood', state:'FL')
+                .save(failOnError:true)
     }
 
     def destroy = {
