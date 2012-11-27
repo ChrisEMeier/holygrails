@@ -1,17 +1,24 @@
 package nfjs
 
-
-
 import grails.test.mixin.*
 import org.junit.*
 
-/**
- * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
- */
 @TestFor(Quest)
 class QuestTests {
-
-    void testSomething() {
-       fail "Implement me"
+    Quest q = new Quest(name:'name')
+    
+    @Before
+    void setUp() {
+        mockForConstraintsTests(Quest)
+    }
+    
+    void testValid() {
+       assert q.validate()
+    }
+    
+    void testBlankName() {
+        q.name = ' '
+        assert !q.validate()
+        assert 'blank' == q.errors.name
     }
 }
