@@ -2,7 +2,7 @@ The Quest for the Holy Grails
 -----------------------------
 (A Grails Sample App)
 
-The application has several branches, representing stages in the development of the application. Switch from one to another using the 'git checkout -b' command followed by the name of the tag.
+The application has several branches, representing stages in the development of the application. Switch from one to another using the 'git checkout -b' command followed by the name of the branch.
 
 Use the 'git branch' command by itself to see the list of available branches.
 
