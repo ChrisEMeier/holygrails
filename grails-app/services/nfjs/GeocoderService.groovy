@@ -12,4 +12,14 @@ class GeocoderService {
         c.latitude = root.result[0].geometry.location.lat.toDouble()
         c.longitude = root.result[0].geometry.location.lng.toDouble()
     }
+    
+    def headers() {
+        [['number','Lat'], ['number','Lng'], ['string','Name']]
+    }
+    
+    def data() {
+        Castle.list().collect { c ->
+            [c.latitude, c.longitude, c.toString()]
+        }
+    }
 }
