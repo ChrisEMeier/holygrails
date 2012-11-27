@@ -5,6 +5,8 @@ class Quest {
     
     String toString() { name }
     
+    static hasMany = [tasks:Task]
+    
     static constraints = {
         name(blank:false)
     }
