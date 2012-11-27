@@ -1,0 +1,21 @@
+.project
+.classpath
+.settings
+/*.launch
+/*.tmproj
+
+# logs
+stacktrace.log
+/test/reports
+/test/test-reports
+/test/test-classes
+/target
+/target-eclipse
+
+/web-app/WEB-INF
+*.war
+
+*.iws
+build
+bin
+.gradle
